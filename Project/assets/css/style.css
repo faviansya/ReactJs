@@ -1,0 +1,121 @@
+p{
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+}
+
+ul{
+
+    font-weight: bold;
+    float: right;
+    padding:30px;
+}
+.h1editor{
+    font-size: 45px;
+}
+#boxmain {
+    margin-left: 105px;
+    margin-right: 106px;
+    margin-bottom: 200px;
+    margin-top: 75px;
+    border: 0px solid;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px #888888;
+    border-radius: 5px;
+  }
+.containneerr{
+    width: 1022px;
+    height: 358px;
+}
+a{
+    color:19345E;
+}
+a:hover {
+    color: orange;
+}
+.currentLink {
+    color: orange;
+ }
+li{
+    display: inline;
+    padding: 10px;
+    color: #19345E;
+    padding: 20px;
+}
+.navbarUtama{
+    font-family: 'Muli', sans-serif;
+    height: 95px;
+}
+
+.logoalteraatas{
+    padding: 10px;
+}
+
+.jumbotron-main{
+    height: 515px;
+    background-image: url(../img/img/img-header.png);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.image-jumbotron{
+    width:174px;
+    height:174px;
+    border-radius: 50%;
+}
+.font-jumbotron{
+    color:white;
+}
+.button-jumbotron{
+    color: white;
+    background-color: darkorange;
+    border: 0px;
+}
+.isi-ukuran{
+    /*margin-left: 106px;
+    margin-right: 105px;*/
+}
+.footer-Bg{
+    height: 207;
+    background-color: #19345E;
+}
+.jumbotron-footer{
+    background-color: #19345E;
+    margin: 0 ;
+}
+.footer-copyright{
+    font-family: 'Roboto';
+    font-size: :12px;
+    color: white;
+}
+.footer-logo{
+    margin-bottom: 25px;
+    height: 66.17;
+    width: 133.52;
+}
+.follow-Us{
+    font-family: Louis George Cafe;
+    color: white;
+}
+.followbro{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.col3{
+    margin-top: 10px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    border: 1px solid #CBCBCB;
+  }
+  
+td, th {
+    border: 1px solid #CBCBCB;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #E3E3E3;
+  }

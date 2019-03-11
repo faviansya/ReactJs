@@ -1,0 +1,20 @@
+.borderhr{
+    background-color: blue;
+    border-width: 1px;
+}
+
+#GalleryFont{
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    margin-left: 15px;
+    color: #19345E;
+    font-size: 20px;
+}
+
+.imagesssssss{
+    width: 305px;
+    height: 305px;
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid gray;
+    margin-top: 80px;
+}
