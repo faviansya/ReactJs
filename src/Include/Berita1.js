@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Berita1 from "../images/berita1.jpeg";
+import Beritas from "../images/berita1.jpeg";
 
 class Berita extends Component {
   render() {
@@ -10,7 +10,7 @@ class Berita extends Component {
             <div class="col-9">
               <img
                 class="card-img-top w-100"
-                src={Berita1}
+                src={Beritas}
                 alt="Card image cap"
               />
             </div>
