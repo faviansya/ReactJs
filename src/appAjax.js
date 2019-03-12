@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./Include/Header.js";
 import Footer from "./Include/Footer.js";
+import ListItem from "./Include/ListItem.js";
 import AllItem from "./Include/listarticle.js";
 import Search from "./Include/Search.js";
 import AsideBot from "./Include/AsideBot.js";
 import Asidetop from "./Include/Asidetop.js";
 import Berita from "./Include/Berita1.js";
+
 import AsideC from "./Include/AsideC.js";
 import axios from "axios";
 
@@ -100,7 +102,6 @@ class App extends Component {
               })}
               <AsideBot />
             </div>
-            
             <div className="col-12 col-lg-8">
               {listNews1.map((item, key) => {
                 const arc_img =
