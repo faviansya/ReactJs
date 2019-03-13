@@ -9,6 +9,7 @@ import Politik from "./Category/Politik";
 import Sport from "./Category/Sport.js";
 import Game from "./Category/Game.js";
 import Ekonomi from "./Category/Ekonomi.js";
+import PatNolPat from "./404/404.js";
 
 const MainRoute = () => {
     return(
@@ -21,7 +22,7 @@ const MainRoute = () => {
             <Route exact path = "/categories/sport" component = {Sport}/>
             <Route exact path = "/categories/Game" component = {Game}/>
             <Route exact path = "/categories/ekonomi" component = {Ekonomi}/>
-
+            <Route component = {PatNolPat}/>
         </Switch>
     )
 }
