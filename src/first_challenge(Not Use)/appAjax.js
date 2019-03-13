@@ -81,7 +81,6 @@ class App extends Component {
     const { listNews,listNews1, listNews4, username, isLogin } = this.state;
     return (
       <div className="App">
-        <Header />
 
         <div className="container-float m-3">
           <div className="row">
@@ -133,7 +132,6 @@ class App extends Component {
             />
           );
         })}
-        <Footer />
       </div>
     );
   }
