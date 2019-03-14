@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
+import Loadable from 'react-loadable'
 
 import Home from "./App";
 import Items from "./Artikel/Items";
@@ -10,6 +11,12 @@ import Sport from "./Category/Sport.js";
 import Game from "./Category/Game.js";
 import Ekonomi from "./Category/Ekonomi.js";
 import PatNolPat from "./404/404.js";
+// import Foot from "./Footer/Cobas";
+
+const Child = Loadable( {
+    loader: () => import('./Footer/Cobas' ),
+    loading: () => <div>LOADING BOSS</div>
+  });
 
 const MainRoute = () => {
     return(
@@ -22,6 +29,7 @@ const MainRoute = () => {
             <Route exact path = "/categories/sport" component = {Sport}/>
             <Route exact path = "/categories/Game" component = {Game}/>
             <Route exact path = "/categories/ekonomi" component = {Ekonomi}/>
+            <Route exact path= "/footer/:source" component = {Child}/>
             <Route component = {PatNolPat}/>
         </Switch>
     )

@@ -16,7 +16,6 @@ class Category extends Component {
         this.state = {
             listNews: [],
             username: "",
-            isLogin: false
         };
     }
     componentDidMount = () => {

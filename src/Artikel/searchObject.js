@@ -10,6 +10,7 @@ class Search extends Component {
               type="search"
               placeholder="Search"
               aria-label="Search"
+              name = "search"
               onChange ={this.props.doSearch}
             />
           </form>

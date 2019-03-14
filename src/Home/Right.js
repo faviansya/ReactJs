@@ -1,45 +1,24 @@
 import React, { Component } from "react";
-import "../css/App.css";
 import Berita from "./Berita.js";
 import axios from "axios";
+import { withRouter } from 'react-router-dom';
+import "../css/App.css";
+import { connect } from 'unistore/react';
+import { actions } from '../store';
 
-const apiKey = "062ea71e9c4b49fba5b9015130ffaaf9";
-const baseURL = "https://newsapi.org/v2/";
-
-const urlHeadLine1 =
-    baseURL +
-    "top-headlines?" +
-    "country=id" +
-    "&pageSize=1" +
-    "&apiKey=" +
-    apiKey;
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listNews1: [],
-            username: "",
-            isLogin: false
-        };
-    }
-
+    
     componentDidMount = () => {
-        const self = this;
-        axios
-            .get(urlHeadLine1)
-            .then(function (response) {
-                self.setState({ listNews1: response.data.articles });
-
-                console.log(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        this.props.GetBerita().then(
+            () => {
+                console.log(this);
+                console.log("MASOKKKKKKKKKk Right");
+            }
+        )
     };
-
     render() {
-        const { listNews1 } = this.state;
+        const { listNews1 } = this.props;
         return (
             <div>
 
@@ -62,4 +41,31 @@ class Home extends Component {
 }
 // export default withRouter(Home);
 
-export default Home;
+export default connect(
+    'listNews1', actions
+)(withRouter(Home));
+
+
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         listNews1: [],
+    //         username: "",
+    //         isLogin: false
+    //     };
+    // }
+
+    // componentDidMount = () => {
+    //     const self = this;
+    //     axios
+    //         .get(urlHeadLine1)
+    //         .then(function (response) {
+    //             self.setState({ listNews1: response.data.articles });
+
+    //             console.log(response.data);
+    //         })
+    //         .catch(function (error) {
+    //             console.log(error);
+    //         });
+    // };

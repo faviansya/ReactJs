@@ -5,13 +5,18 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import AppRouter from './AppRouter';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { store } from './store';
+
+import { Provider } from 'unistore/react';
 
 const rootEl = document.getElementById('root');
 const render = Component =>
     ReactDOM.render(
-        <BrowserRouter>
-            <Component />
-        </BrowserRouter>,
+        <Provider store = {store}>
+            <BrowserRouter>
+                <Component />
+            </BrowserRouter>
+        </Provider>,
         rootEl
     );
 render(AppRouter);

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import AsideBot from "./AsideBot.js";
 import Asidetop from "./AsideTop.js";
 import AsideC from "./AsideContent";
-import axios from "axios";
+import { withRouter } from 'react-router-dom';
+import { connect } from 'unistore/react';
+import { actions } from '../store';
 
 const apiKey = "062ea71e9c4b49fba5b9015130ffaaf9";
 const baseURL = "https://newsapi.org/v2/";
@@ -15,30 +17,39 @@ const urlHeadLine4 =
     apiKey;
 
 class Aside extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            listNews4: [],
-            username: "",
-            isLogin: false
-        };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         listNews4: [],
+    //         username: "",
+    //         isLogin: false
+    //     };
+    // }
+
+    // componentDidMount = () => {
+    //     const self = this;
+    //     axios
+    //         .get(urlHeadLine4)
+    //         .then(function (response) {
+    //             self.setState({ listNews4: response.data.articles });
+
+    //             console.log(response.data);
+    //         })
+    //         .catch(function (error) {
+    //             console.log(error);
+    //         });
+    // };
 
     componentDidMount = () => {
-        const self = this;
-        axios
-            .get(urlHeadLine4)
-            .then(function (response) {
-                self.setState({ listNews4: response.data.articles });
-
-                console.log(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        this.props.GetBerita4().then(
+            () => {
+                console.log(this);
+                console.log("MASOKKKKKKKKKk Aside");
+            }
+        )
     };
     render() {
-        const { listNews4 } = this.state;
+        const { listNews4 } = this.props;
         return (
             <div>
                 <Asidetop />
@@ -62,4 +73,8 @@ class Aside extends Component {
 }
 // export default withRouter(Home);
 
-export default Aside;
+// export default Aside;
+
+export default connect(
+    'listNews4', actions
+)(withRouter(Aside));

@@ -7,10 +7,10 @@ class Header extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <a className="navbar-brand" href="/">
+      <Link className="navbar-brand" to="/">
           <img src={logo} width="30" height="30" className="d-inline-block align-top" alt="" />
           <span> Kabar Reaksi</span>
-        </a>
+          </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -28,10 +28,10 @@ class Header extends Component {
                 Caegories
                       </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="/categories/politik">Politik</a>
-                <a className="dropdown-item" href="/categories/sport">Sport</a>
-                <a className="dropdown-item" href="/categories/game">Game</a>
-                <a className="dropdown-item" href="/categories/Ekonomi">Ekonomi</a>
+                <Link to="/categories/politik" className="nav-link">Politik</Link>
+                <Link to="/categories/sport" className="nav-link">Sport</Link>
+                <Link to="/categories/game" className="nav-link">Game</Link>
+                <Link to="/categories/Ekonomi" className="nav-link">Ekonomi</Link>
               </div>
             </li>
             <li className="nav-item">
